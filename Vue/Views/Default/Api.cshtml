@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Api";
+}
+
+<h2>Api</h2>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+    $(function () {
+        var dataJSON = {Id:1,Title:'标题测试'};
+        console.log(JSON.stringify(dataJSON));
+        $.ajax({
+            url: "http://localhost:53620/api/values",
+            type: "Post",
+            data: { Id: 1, Title: '标题测试' },
+            success: function () {
+
+            }
+        })
+    })
+</script>
